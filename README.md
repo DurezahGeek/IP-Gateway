@@ -1,4 +1,4 @@
-# 🛠️ Projeto Packet Tracer: Comunicação entre Sub-redes com Subinterfaces, IP,  Gateway e VLANs
+# 🛠️ Projeto Cisco Packet Tracer: Comunicação entre Sub-redes com Subinterfaces, IP,  Gateway e VLANs
 
 ## 🎯 Objetivo
 
