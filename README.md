@@ -113,7 +113,7 @@ Mostra conexões ativas (se houver), como simulações de serviços ou respostas
 
 ### 💻 PCA – Configuração de Rede
 > Mostra o modelo, IP, MAC Address e Gateway configurado no PC1.
-![PC1 Detalhes](imagens/4.png)
+![PC1 Detalhes](https://raw.githubusercontent.com/DurezahGeek/IP-Gateway/refs/heads/main/src1/6.png)
 
 ---
 
