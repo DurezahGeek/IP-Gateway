@@ -136,7 +136,7 @@ Mostra conexões ativas (se houver), como simulações de serviços ou respostas
 
 ## 📂 Arquivos Incluídos
 
-- `dns-firewall.pkt`: Arquivo da simulação no Cisco Packet Tracer
+- `https://github.com/DurezahGeek/IP-Gateway/blob/main/Configura%C3%A7%C3%A3o%20de%20IP%2C%20Gateway%20e%20Subnet.pkt`: Arquivo da simulação no Cisco Packet Tracer
 - `README.md`: Este documento explicando o projeto
 
 ## 👩‍💻 Autora
