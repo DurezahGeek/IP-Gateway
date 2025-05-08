@@ -119,13 +119,13 @@ Mostra conexões ativas (se houver), como simulações de serviços ou respostas
 
 ### 💻 PCB – Configuração de Rede
 > Mostra o modelo, IP, MAC Address e Gateway configurado no PC2.
-![PC2 Detalhes](https://raw.githubusercontent.com/DurezahGeek/IP-Gateway/refs/heads/main/src1/2.png)
+![PC2 Detalhes](https://github.com/DurezahGeek/IP-Gateway/blob/main/src1/5.png)
 
 ---
 
 ### 📶 Switch Detalhes
 > Apresenta o modelo do switch (2960) e as portas que estão conectadas aos dispositivos.
-![Switch Detalhes](https://raw.githubusercontent.com/DurezahGeek/IP-Gateway/refs/heads/main/src1/3.png)
+![Switch Detalhes](https://raw.githubusercontent.com/DurezahGeek/IP-Gateway/refs/heads/main/src1/S.png)
 
 ---
 
