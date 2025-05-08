@@ -131,7 +131,7 @@ Mostra conexões ativas (se houver), como simulações de serviços ou respostas
 
 ### 🌐 Roteador Detalhes
 > Informações do roteador (1841), portas conectadas e IP configurado na interface.
-![Roteador Detalhes](https://raw.githubusercontent.com/DurezahGeek/IP-Gateway/refs/heads/main/src1/4.png)
+![Roteador Detalhes](https://raw.githubusercontent.com/DurezahGeek/IP-Gateway/refs/heads/main/src1/rr.png)
 
 
 ## 📂 Arquivos Incluídos
