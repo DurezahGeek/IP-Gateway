@@ -1,106 +1,50 @@
-# 🛠️ Projeto Cisco Packet Tracer: Comunicação entre Sub-redes com Subinterfaces, IP,  Gateway e VLANs
+# 🛠️ Projeto Cisco Packet Tracer: Configuração de IP, Gateway e Subnet
 
 ## 🎯 Objetivo
+Configurar dois computadores (PCs) em uma rede local, atribuindo IPs, gateway e máscara de sub-rede de forma que consigam se comunicar corretamente entre si.
 
-Demonstrar a interligação de duas sub-redes diferentes usando apenas **uma interface física no roteador**, por meio de **subinterfaces com VLANs** e um **switch em modo trunk**.
+## 🛠️ Topologia Utilizada
 
----
-
-## 📦 Equipamentos utilizados
-
-- 1 Roteador Cisco (ex: 1841 ou 2911)
-- 1 Switch Cisco gerenciável (ex: 2960)
-- 2 PCs
-- Cabos diretos (cobre)
+- 🖥️ **2 PCs:** PC1 (PCA) e PC2 (PCB)  
+- 🔀 **1 Switch:** Switch0  
+- 🌐 **1 Roteador:** Router0  
+- 🔌 **Cabos:** Copper Straight-Through (conectando PCs e roteador ao switch)
 
 ---
 
-## 🧱 Plano de Endereçamento e VLANs
+## 🔧 Configurações Realizadas
 
-| Sub-rede         | IP do PC        | Gateway no Roteador | VLAN |
-|------------------|-----------------|----------------------|------|
-| 192.168.10.0/24  | 192.168.10.10   | 192.168.10.1         | 10   |
-| 192.168.20.0/24  | 192.168.20.10   | 192.168.20.1         | 20   |
+### 📍 PC1 (PCA)
+- **IP:** 192.168.1.10  
+- **Máscara de Sub-rede:** 255.255.255.0  
+- **Gateway:** 192.168.1.1  
+
+### 📍 PC2 (PCB)
+- **IP:** 192.168.1.20  
+- **Máscara de Sub-rede:** 255.255.255.0  
+- **Gateway:** 192.168.1.1  
+
+### 📡 Roteador (Router0)
+- **Interface:** FastEthernet 0/0  
+- **IP:** 192.168.1.1  
+- **Máscara de Sub-rede:** 255.255.255.0  
+- **Porta:** Ativada (Port Status: ON)
 
 ---
+## ✅ Teste de Conectividade
 
-## 🔌 Conexões
-
-- PCA → Switch Fa0/1  
-- PCB → Switch Fa0/2  
-- Switch Fa0/24 → Roteador Fa0/0  
-
----
-
-## 🔧 Etapas principais de configuração
-
-### 🖧 Roteador: Subinterfaces com 802.1Q
-
+- No **PC1**, foi executado:
 ```bash
-enable
-configure terminal
-
-interface FastEthernet0/0.10
-encapsulation dot1Q 10
-ip address 192.168.10.1 255.255.255.0
-
-interface FastEthernet0/0.20
-encapsulation dot1Q 20
-ip address 192.168.20.1 255.255.255.0
-
-interface FastEthernet0/0
-no shutdown
-enable
-configure terminal
-
-vlan 10
-name Desenvolvimento
-
-vlan 20
-name Infraestrutura
-
-interface fastEthernet 0/1
-switchport mode access
-switchport access vlan 10
-
-interface fastEthernet 0/2
-switchport mode access
-switchport access vlan 20
-
-interface fastEthernet 0/24
-switchport mode trunk
-
+ping 192.168.1.20
 ```
-
-## ✅ Testes de Conectividade
-
-Acesse o **Command Prompt** de cada PC (aba "Desktop") e execute os testes:
+Resultado: respostas bem-sucedidas confirmando a comunicação entre os dispositivos.
 
 ---
+## 📝 Observações
 
-### 🔁 1. Ping
-
-```bash
-ping 192.168.20.10   # Do PCA para PCB
-ping 192.168.10.10   # Do PCB para PCA
-```
-Se tudo estiver correto, o ping será bem-sucedido.
-
----
-
-### 🛰️ 2. Traceroute (Tracert)
-```bash
-tracert 192.168.20.10   # A partir do PCA
-```
-Mostra o caminho dos pacotes até o destino, incluindo o roteador.
-
----
-
-### 📡 3. Netstat
-```bash
-netstat
-```
-Mostra conexões ativas (se houver), como simulações de serviços ou respostas de ping.
+- Todos os dispositivos estão na mesma sub-rede (`192.168.1.0/24`).
+- O roteador atua como gateway para os PCs, permitindo a comunicação via camada 3 (IP).
+- A conectividade foi testada com sucesso.
 
 
 ## 🖼️ Capturas de Tela
