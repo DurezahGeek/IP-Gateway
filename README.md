@@ -119,7 +119,7 @@ Mostra conexões ativas (se houver), como simulações de serviços ou respostas
 
 ### 💻 PCB – Configuração de Rede
 > Mostra o modelo, IP, MAC Address e Gateway configurado no PC2.
-![PC2 Detalhes](https://github.com/DurezahGeek/IP-Gateway/blob/main/src1/5.png)
+![PC2 Detalhes](https://raw.githubusercontent.com/DurezahGeek/IP-Gateway/refs/heads/main/src1/b.png)
 
 ---
 
